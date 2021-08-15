@@ -1,8 +1,8 @@
 :root {
   /* colors */
-  --primary-text-color: #707070;
+  --primary-text-color: #50230a;
   --secondary-text-color: #2e266f;
-  --basic-light-text-color: #ffffff;
+  --basic-light-text-color: #f2eade;
   --primary-bg-color: #fccf31;
   --primary-bg-gradient: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
   --secondary-bg-color: rgba(204, 204, 204, 0.4);
@@ -57,4 +57,12 @@ img {
   height: 100px;
   margin: 0 auto;
   background-color: var(--primary-bg-color);
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  /*  */
+  margin-right: 10px;
 }
