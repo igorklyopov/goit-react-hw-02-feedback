@@ -66,3 +66,20 @@ img {
   /*  */
   margin-right: 10px;
 }
+
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+  /* transition-property: color, fill, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}

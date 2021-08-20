@@ -12,8 +12,6 @@ class App extends Component {
     bad: 0,
   };
 
-  static defaultProps = {};
-
   static propTypes = {};
 
   getOptionsValues = () => Object.keys(this.state);
@@ -25,8 +23,6 @@ class App extends Component {
   };
 
   countTotalFeedback = () => {
-    // const { good, neutral,bad} = this.state;
-    // let total = good + neutral + bad;
     let total = Object.values(this.state).reduce(
       (acc, currentValue) => acc + currentValue,
       0
@@ -47,30 +43,30 @@ class App extends Component {
 
     return (
       <>
-        <h1>Feedback from visitors to Café Expresso</h1>
+        <Container>
+          <h1>Feedback from visitors to Café Expresso</h1>
 
-        <Section title="Please leave your feedback">
-          <Container>
+          <Section title="Please leave your feedback">
             <FeedbackOptions
               options={this.getOptionsValues()}
               onLeaveFeedback={this.onLeaveFeedback}
             ></FeedbackOptions>
-          </Container>
-        </Section>
+          </Section>
 
-        <Section title="Statistics">
-          {this.countTotalFeedback() > 0 ? (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={this.countTotalFeedback()}
-              positivePercentage={this.countPositiveFeedbackPercentage()}
-            ></Statistics>
-          ) : (
-            <Notification message="No feedback given"></Notification>
-          )}
-        </Section>
+          <Section title="Statistics">
+            {this.countTotalFeedback() > 0 ? (
+              <Statistics
+                good={good}
+                neutral={neutral}
+                bad={bad}
+                total={this.countTotalFeedback()}
+                positivePercentage={this.countPositiveFeedbackPercentage()}
+              ></Statistics>
+            ) : (
+              <Notification message="No feedback given"></Notification>
+            )}
+          </Section>
+        </Container>
       </>
     );
   }
