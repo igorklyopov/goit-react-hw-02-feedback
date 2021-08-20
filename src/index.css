@@ -1,13 +1,10 @@
 :root {
   /* colors */
   --primary-text-color: #50230a;
-  --secondary-text-color: #2e266f;
   --basic-light-text-color: #f2eade;
-  --primary-bg-color: #fccf31;
+  --primary-bg-color: #fde9a1;
   --primary-bg-gradient: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
-  --secondary-bg-color: rgba(204, 204, 204, 0.4);
-  --basic-light-bg-color: #f7f7f7;
-  --secondary-light-bg-color: #ffffff;
+  --secondary-light-bg-color: #f1e7cb;
   --accent-bg-color: #9999ff;
 
   /* typography */
@@ -27,44 +24,6 @@ body {
   font-size: 16px;
   line-height: 133%;
   background-color: var(--primary-bg-color);
-  background-image: var(--primary-bg-gradient);
-  background-repeat: no-repeat;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-#root {
-  height: 100vh;
-}
-
-/* for test */
-.testTitle {
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-  background-color: var(--primary-bg-color);
-}
-
-.button {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  /*  */
-  margin-right: 10px;
 }
 
 .list {

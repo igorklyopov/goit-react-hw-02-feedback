@@ -4,20 +4,25 @@ import style from "../Statistics/Statistics.module.css";
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <ul className={`list ${style.statisticsList}`}>
-      <li>
-        Good: <span>{good}</span>
+      <li className={style.statisticsItem}>
+        <span className={style.statisticsLabel}>Good: </span>
+        <span className={style.statisticsValue}>{good}</span>
       </li>
-      <li>
-        Neutral: <span>{neutral}</span>
+      <li className={style.statisticsItem}>
+        <span className={style.statisticsLabel}>Neutral: </span>
+        <span className={style.statisticsValue}>{neutral}</span>
       </li>
-      <li>
-        Bad: <span>{bad}</span>
+      <li className={style.statisticsItem}>
+        <span className={style.statisticsLabel}>Bad: </span>
+        <span className={style.statisticsValue}>{bad}</span>
       </li>
-      <li>
-        Total: <span>{total}</span>
+      <li className={style.statisticsItem}>
+        <span className={style.statisticsLabel}>Total: </span>
+        <span className={style.statisticsValue}>{total}</span>
       </li>
-      <li>
-        Positive feedback: <span>{positivePercentage}%</span>
+      <li className={style.statisticsItem}>
+        <span className={style.statisticsLabel}>Positive feedback: </span>
+        <span className={style.statisticsValue}>{positivePercentage}%</span>
       </li>
     </ul>
   );

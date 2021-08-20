@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Container from "./components/Container/Container";
+import PageWrap from "./components/PageWrap/PageWrap";
 import Section from "./components/Section/Section";
 import FeedbackOptions from "./components/FeedbackOptions/FeedbackOptions";
 import Statistics from "./components/Statistics/Statistics";
@@ -42,32 +42,28 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <>
-        <Container>
-          <h1>Feedback from visitors to Café Expresso</h1>
+      <PageWrap title="Feedback from visitors to Café Expresso">
+        <Section title="Please leave your feedback">
+          <FeedbackOptions
+            options={this.getOptionsValues()}
+            onLeaveFeedback={this.onLeaveFeedback}
+          ></FeedbackOptions>
+        </Section>
 
-          <Section title="Please leave your feedback">
-            <FeedbackOptions
-              options={this.getOptionsValues()}
-              onLeaveFeedback={this.onLeaveFeedback}
-            ></FeedbackOptions>
-          </Section>
-
-          <Section title="Statistics">
-            {this.countTotalFeedback() > 0 ? (
-              <Statistics
-                good={good}
-                neutral={neutral}
-                bad={bad}
-                total={this.countTotalFeedback()}
-                positivePercentage={this.countPositiveFeedbackPercentage()}
-              ></Statistics>
-            ) : (
-              <Notification message="No feedback given"></Notification>
-            )}
-          </Section>
-        </Container>
-      </>
+        <Section title="Statistics">
+          {this.countTotalFeedback() > 0 ? (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            ></Statistics>
+          ) : (
+            <Notification message="No feedback given"></Notification>
+          )}
+        </Section>
+      </PageWrap>
     );
   }
 }
