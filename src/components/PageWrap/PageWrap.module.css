@@ -10,7 +10,7 @@
   padding: 20px 0;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--basic-box-shadow);
 
   background-color: var(--primary-bg-color);
   background-image: var(--primary-bg-gradient);

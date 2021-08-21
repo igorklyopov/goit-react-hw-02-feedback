@@ -24,6 +24,8 @@
   font-weight: var(--bold-font-weight);
   text-transform: uppercase;
   background-color: var(--secondary-light-bg-color);
+  box-shadow: var(--basic-box-shadow);
+  transition: var(--basic-bg-animation);
 
   cursor: pointer;
   outline: none;
